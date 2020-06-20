@@ -9,6 +9,7 @@ var stand1, stand2;
 var box1, block;
 function preload(){
   papaImg = loadImage("father.PNG");
+  childImg = loadImage("child.PNG");
 }
 
 function setup() {
@@ -64,7 +65,4 @@ function draw() {
   box6.display();
   imageMode(CENTER);
   image(papaImg, block1.position.x, block1.position.y, 100, 100);
-}
-if(block.x > 2300) {
-  block.shapeColor ="red";
 }

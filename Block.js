@@ -8,6 +8,7 @@ class Block {
     this.body = Bodies.rectangle(x, y, width, height, options);
     this.width = width;
     this.height = height;
+    this.image = (childImg);
     World.add(world, this.body);
   }
 
@@ -20,8 +21,8 @@ class Block {
       push();
       translate(pos.x, pos.y);
       rotate(angle);
-      rectMode(CENTER);
-      rect(0, 0, this.width, this.height);
+      imageMode(CENTER);
+      image(this.image, block.body.position.x, block.body.position.y, 50, 50)
       pop();
   }
 }
